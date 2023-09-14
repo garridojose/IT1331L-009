@@ -23,7 +23,7 @@ async function getUserTweet(tweetsQueryParams) {
 
 function generateUri(tweetsQueryParams) {
     const baseUri = userTweetsConfig.api.uri;
-    return '${baseUri}?;${new URLSearchParams(tweetsQueryParams.toJson()).toString()}';
+    return `${baseUri}?;${new URLSearchParams(tweetsQueryParams.toJson()).toString()}`;
 }
 
 function processResponse(data) {

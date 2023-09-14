@@ -3,7 +3,7 @@ class GetTweetsQueryParams {
         this.username = username;
         this.userId = userId;
         this.includeReplies = includeReplies;
-        this.limit = limit;
+        this.limit = limit
     }
 
     toJson(){

@@ -1,6 +1,6 @@
 const userDetailsConfig = {
     "api": {
-        "uri": ': `https://twitter154.p.rapidapi.com/user/details?username=',
+        "uri": `https://twitter154.p.rapidapi.com/user/details?username=`,
         "method": "GET",
         "headers": {
             "X-RapidAPI-Key":"7788b4bbc9msh3006c4522df34d1p1499fbjsn97c659546827",
@@ -10,7 +10,7 @@ const userDetailsConfig = {
 }
 
 async function getUserDetails(username) {
-    const url = '${userDetailsConfig.api.uri}${username}';
+    const url = `${userDetailsConfig.api.uri}${username}`;
     console.log(url);
     const options = {
         method: userDetailsConfig.api.method,
