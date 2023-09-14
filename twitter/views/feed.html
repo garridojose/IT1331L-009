@@ -8,29 +8,44 @@
 </head>
 
 <body>
-    <div class="tweet-container" id="tweet-container">
-        <div class="tweet">
-            <div class="user-info">
-                <img class="user-avatar"
-                    src="https://pbs.twimg.com/profile_images/971150568210292736/x1cCrJpq_normal.jpg" alt="User Avatar">
-                <div>
-                    <div class="user-name">Programmers Meme</div>
-                    <div class="user-handle">ProgrammersMeme</div>
-                </div>
-            </div>
-            <div class="tweet-content">Mindset</div>
-            <img class="tweet-image" src="https://pbs.twimg.com/media/F54wKVQXUAAm1M0?format=webp&name=small"
-                alt="Tweet Image">
-            <div class="tweet-actions">
-                <i class="fa fa-heart" style="font-size: 18px">
-                    <label id="action-value">2</label>
-                </i>
-                <i class="fa fa-share" style="font-size: 18px">
-                    <label id="action-value">3</label>
-                </i>
-            </div>
-        </div>
-    </div>
+    <script src="../controllers/fetchUser.js"></script>
+    <script src="../controllers/fetchTweet.js"></script>
+    <script src="../controllers/mediaLoader.js"></script>
+    <script src="../models/GetTweetsQueryParams.js"></script>
+    <div class="tweet-container" id="tweet-container"></div>
+    <script>
+        async function loadTweets() {
+            const tweetContainer = document.getElementById('tweet-container');
+            const user = await getUserDetails("ProgrammersMeme");
+            const tweetData = await getUserTweet(new GetTweetsQueryParams(
+                user.username, user.user_id, false, 40));
+        }
+    </script> 
 </body>
 
 </html>
+
+<!-- 
+<div class="tweet">
+    <div class="user-info">
+        <img class="user-avatar"
+            src="https://pbs.twimg.com/profile_images/971150568210292736/x1cCrJpq_normal.jpg" alt="User Avatar">
+        <div>
+            <div class="user-name">Programmers Meme</div>
+            <div class="user-handle">ProgrammersMeme</div>
+        </div>
+    </div>
+    <div class="tweet-content">Mindset</div>
+    <img class="tweet-image" src="https://pbs.twimg.com/media/F54wKVQXUAAm1M0?format=webp&name=small"
+        alt="Tweet Image">
+    <div class="tweet-actions">
+        <i class="fa fa-heart" style="font-size: 18px">
+            <label id="action-value">2</label>
+        </i>
+        <i class="fa fa-share" style="font-size: 18px">
+            <label id="action-value">3</label>
+        </i>
+    </div>
+</div>
+</div>
+-->
