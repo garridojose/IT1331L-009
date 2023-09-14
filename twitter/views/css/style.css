@@ -16,3 +16,53 @@ body {
     margin: 16px;    
 }
 
+div .user-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+div img:hover {
+    background-color: pink;
+    opacity: 0.5;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.user-name {
+    font-weight: bold;
+}
+
+.user-name+div {
+    color:#657786;
+}
+
+.tweet-content {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.tweet-image {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.tweet-actions {
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+    color: #657786;
+    font-family: Arial, sans-serif;
+}
+
+#action-value {
+    font-family: Arial, sans-serif;
+}
+
