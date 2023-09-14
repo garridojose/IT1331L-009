@@ -4,4 +4,15 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* #141d26 */
+.tweet-container {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.tweet {
+    background-color: #192734;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;    
+}
+
